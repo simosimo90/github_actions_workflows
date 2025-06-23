@@ -1,0 +1,13 @@
+name: My Github Actions Workflow
+# this is the event, pushing to the repo
+on: push
+
+#this is the job, made by each step
+jobs: 
+  testing_github: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello
+        run: echo "Hello Github Actions"
+      - name: Display repo name
+        run: echo "This workflow is running in ${{github.repository}}"
